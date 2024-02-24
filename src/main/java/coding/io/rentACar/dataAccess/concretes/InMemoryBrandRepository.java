@@ -2,10 +2,11 @@ package coding.io.rentACar.dataAccess.concretes;
 
 import coding.io.rentACar.dataAccess.abstracts.BrandRepository;
 import coding.io.rentACar.entities.concretes.Brand;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Repository
 public class InMemoryBrandRepository implements BrandRepository {
     List <Brand> brands;
 
@@ -20,6 +21,6 @@ public class InMemoryBrandRepository implements BrandRepository {
 
     @Override
     public List<Brand> getAll() {
-        return null;
+        return brands;
     }
 }
